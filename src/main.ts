@@ -1,6 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { ReactiveFormsModule } from '@angular/forms'; // Додай ReactiveFormsModule
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [ReactiveFormsModule] // Використовуємо ReactiveFormsModule для форм
+});
